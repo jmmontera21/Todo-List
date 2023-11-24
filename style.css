@@ -1,0 +1,217 @@
+:root {
+	--dark: #374151;
+	--darker: #1F2937;
+	--darkest: #111827;
+	--grey: #6B7280;
+	--pink: #EC4899;
+	--purple: #8B5CF6;
+	--light: #EEE;
+	--green: rgb(10, 201, 36);
+	--blue:#0000ff;
+	--blueglow: rgba(17, 109, 247, 0.75);
+}
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Fira sans", sans-serif;
+}
+
+body {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	min-height: 100vh;
+	color: #FFF;
+	background-color: var(--blueglow);
+}
+
+.box {
+    margin: 100px;
+    position: relative;
+    width: 550px;
+    height: 550px;
+    border-radius: 30px;
+    background: rgba(0,0,155);
+    box-shadow: 25px 25px 75px rgba(0,0,255,0.25), 
+    10px 10px 70px rgba(0,0,75,0.25), 
+    inset 5px 5px 10px rgba(0,0,155,0.5),
+    inset 5px 5px 20px rgba(255,255,255,0.3),
+    inset -5px -5px 15px rgba(0,0,0,0.75);
+}
+
+header {
+	padding: 2rem 1rem;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+header h1{ 
+	font-size: 2.5rem;
+	padding-left: 30px;
+    text-align: center;
+    color: aqua;
+	font-weight: 300;
+	margin-bottom: 1rem;
+}
+
+#new-task-form {
+	display: flex;;
+}
+
+input, button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+}
+
+#new-task-input {
+    position: relative;
+    width: 100%;
+    background-color: white;
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+    border-radius: 15px;
+    font-size: 1em;
+    box-shadow: 5px 5px 7px rgba(0,0,0,0.25), inset 2px 2px 5px
+    rgba(0,0,0,0.5), inset -3px -3px 5px rgba(0,0,0,0.5);
+}
+
+#new-task-input::placeholder {
+	color: var(--grey);
+}
+
+#new-task-submit {
+	margin: 3px;
+	color: var(--light);
+	border-radius: 15px;
+	margin-left: 10px;
+	font-size: 1.1rem;
+	font-weight: 700;
+	border-style: outset;
+	border-color:rgb(50,50,55,0.5);
+	cursor: pointer;
+	transition: 0.4s;
+	background-image: linear-gradient(to right, var(--dark), var(--darkest));
+}
+
+#new-task-submit:hover {
+	opacity: 0.8;
+}
+
+#new-task-submit:active {
+	opacity: 0.6;
+}
+
+main {
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.task-list {
+	padding: 0.5rem 1rem 0rem 1rem;
+	height: 300px; 
+}
+
+#tasks {
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	padding-right: 3px;
+}
+  
+#tasks::-webkit-scrollbar {
+	width: 10px;
+}
+  
+#tasks::-webkit-scrollbar-thumb {
+	background-color: var(--light);
+	border-radius: 6px;
+	border: 3px solid var(--darker);
+}
+  
+#tasks::-webkit-scrollbar-track {
+	background-color: var(--darker);
+	border-radius: 8px;
+	box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.task-list h2 {
+	font-size: 1.5rem;
+	font-weight: 300;
+	color: var(--light);
+	margin-bottom: 1rem;
+    margin-top: -1rem;
+}
+
+#tasks .task {
+	display: flex;
+	justify-content: space-between;
+	background-image: url(ocean.jpg);
+	background-position: center;
+	background-size: cover;
+    cursor: pointer;
+	padding: 1rem;
+	border-radius: 15px;
+	margin-bottom: 20px;
+    box-shadow: 5px 5px 7px rgba(20,20,35,0.25), inset 2px 2px 5px
+    rgba(20,40,35,0.5), inset -3px -3px 5px rgba(20,40,35,0.5);
+}
+
+.task .content {
+	flex: 1 1 0%;
+}
+
+.task .content .text {
+	color: var(--light);
+	font-size: 1.125rem;
+	width: 100%;
+	display: block;
+	transition: 0.4s;
+}
+
+.task .content .text:not(:read-only) {
+	color: yellow;
+}
+
+.task .actions {
+	display: flex;
+	margin: 0 -0.5rem;
+}
+
+.task .actions button {
+	cursor: pointer;
+	margin: 0 0.5rem;
+	font-size: 1rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	transition: 0.4s;
+}
+
+.task .actions button:hover {
+	opacity: 0.8;
+}
+
+.task .actions button:active {
+	opacity: 0.6;
+}
+
+.task .actions .edit {
+	color: var(--light);
+	background-color: var(--blue);
+	border-style: groove;
+	border-color: rgb(50,50,55,0.5);
+	border-radius: 15px;
+}
+
+.task .actions .delete {
+	background-color: crimson;
+	color: var(--light);
+	border-style: groove;
+	border-color: rgb(50,50,55,0.5);
+	border-radius: 15px;
+}

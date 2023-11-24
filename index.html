@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Todo List</title>
+
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="box">
+        <header>
+            <img src="todos.png" alt="TODO" style="position: absolute; width: 40px; margin-left: 140px;">
+            <h1><span style="color: yellow;">T</span><span style="color: greenyellow;">o</span> 
+                <span style="color: plum;">D</span><span style="color: pink;">o</span> List</h1>
+            <form id="new-task-form">
+                <input 
+                    type="text" 
+                    name="new-task-input" 
+                    id="new-task-input" 
+                    placeholder="What are your plans?">
+                <input 
+                    type="submit"
+                    id="new-task-submit" 
+                    value="Add task">
+            </form>
+        </header>
+        <main>
+            <section class="task-list">
+                <h2>Here are your tasks:</h2>
+                <div id="tasks">
+
+                    <!-- <div class="task">
+                        <div class="content">
+                            <input 
+                                type="text" 
+                                class="text"
+                                value="A new task"
+                                readonly>
+                        </div>
+                        <div class="actions">
+                            <button class="edit">Edit</button>
+                            <button class="delete">Delete</button>
+                        </div>
+                    </div> -->
+
+                </div>
+            </section>
+        </main>
+    </div>
+
+	<script src="function.js"></script>
+</body>
+</html>
